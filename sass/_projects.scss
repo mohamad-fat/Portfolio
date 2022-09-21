@@ -1,0 +1,193 @@
+.projects {
+  overflow: hidden;
+
+  &-image {
+    width: 100vw;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background: linear-gradient(
+        to right,
+        rgba($primary-color, 0.9),
+        rgba($primary-color, 0.7)
+      ),
+      url('../img/projects-bg.jpg') center bottom;
+    background-size: cover;
+
+    &-label {
+      text-align: center;
+      color: set-text-color($primary-color);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      width: 80%;
+
+      .underline {
+        width: 140px;
+        height: 0.1px;
+        background-color: $secondary-color;
+        margin: auto;
+        box-shadow: 1px 1px 4px 3px $secondary-color;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &-container {
+    //height: 700px;
+    background-color: $primary-color;
+    display: grid;
+    grid-template-columns: 1fr;
+    //grid-row-gap: 0px;
+    justify-items: center;
+    align-items: center;
+
+  }
+
+  &-item {
+    width: 70vw;
+    margin-top: 20px;
+
+    &-image {
+      img {
+        width: 100%;
+        height: 170px;
+        opacity: 0.4;
+      }
+    }
+
+    &-box {
+      position: relative;
+      top: -4px;
+      //background-color: #5a5a5ad0;
+      background-color: rgb(65, 65, 65);
+
+      .description-box {
+        display: none;
+        h3 {
+          margin-top: 7px;
+          font-family: 'Delius', sans-serif;
+          color: darken($secondary-color, $amount: 7%);
+          border-bottom: 3px solid #000;
+          display: inline-block;
+        }
+
+        p {
+          margin-top: 7px;
+          padding: 5px;
+          color: set-text-color($primary-color);
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+      }
+
+      .link-box {
+        display: none;
+        padding: 6px;
+        h4 {
+          margin-top: 7px;
+          margin-bottom: 5px;
+          font-family: 'Delius', sans-serif;
+          color: darken($secondary-color, $amount: 7%);
+          border-bottom: 3px solid #000;
+          width: 110px;
+
+        }
+
+        .link {
+          text-decoration: none;
+          color: set-text-color($primary-color);
+          font-family: 'Delius', sans-serif;
+          font-size: 15px;
+
+          &:hover {
+            color: violet;
+          }
+        }
+      }
+
+      .lang-box {
+        display: none;
+        padding: 7px;
+
+        img {
+          margin-right: 7px;
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+
+
+    &-nav {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      font-family: 'Dosis', Courier, monospace;
+      font-weight: 900;
+      position: relative;
+      top: -4px;
+
+      .description {
+        width: 80px;
+        height: 18px;
+        background-color: darken($secondary-color, 10%);
+        border-bottom-right-radius: 100%;
+        cursor: pointer;
+        box-shadow: 3px 3px 9px 0px set-text-color($primary-color);
+      }
+
+      .link {
+        width: 80px;
+        height: 18px;
+        background-color: darken($secondary-color, 10%);
+        border-bottom-right-radius: 100%;
+        cursor: pointer;
+        box-shadow: 3px 3px 9px 0px set-text-color($primary-color);
+      }
+
+      .lang {
+        width: 80px;
+        height: 18px;
+        background-color: darken($secondary-color, 10%);
+        border-bottom-right-radius: 100%;
+        cursor: pointer;
+        box-shadow: 3px 3px 9px 0px set-text-color($primary-color);
+      }
+    }
+
+
+  }
+
+
+
+  .social-icons {
+    overflow: hidden;
+    z-index: 1;
+    position: fixed;
+    bottom: 1rem;
+    left: 0.3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+
+    &-link {
+      @include transition-ease;
+      color: set-text-color($primary-color);
+      margin: 0.4rem;
+      cursor: pointer;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  footer {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    font-family: 'Dosis', sans-serif;
+    transform: rotate(-90deg) translate(40px, 45px);
+    color: set-text-color($primary-color);
+  }
+}

@@ -1,0 +1,66 @@
+.home {
+    height: 100vh;
+    z-index: 1;
+    overflow: auto;
+    text-align: center;
+    align-items: center;
+    background: 
+    linear-gradient(
+        to right,
+        rgba($primary-color, 0.9),
+        rgba($primary-color, 0.5)
+     ),
+     url('../img/home-bg.jpg') center;
+     background-size: cover;
+     color: set-text-color($primary-color);
+
+     &-content {
+        margin-top: 40vh;
+     }
+
+     &-greeting  {
+        font-family: 'Delius Swash Caps', cursive;
+        font-size: 2rem;
+        margin-bottom: -0.7rem;
+     }
+
+     &-name {
+        font-family: 'Dosis', sans-serif;
+        font-size: 3rem;
+        border-bottom: 0.3rem solid set-text-color($primary-color);
+     }
+
+     &-work {
+        font-family: 'Delius Swash Caps', cursive;
+        margin-top: 0.3rem;
+     }
+
+      .social-icons {
+         overflow: hidden;
+         z-index: 1;
+         position: fixed;
+         bottom: 1rem;
+         left: 1rem;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+
+         &-link {
+            @include transition-ease;
+            color: set-text-color($primary-color);
+            margin: 0.4rem;
+            cursor: pointer;
+            
+            &:hover {
+                  color: $secondary-color;
+            }  
+        }
+     }
+
+     footer {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        font-family: 'Dosis', sans-serif;
+     }
+}

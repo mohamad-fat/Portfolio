@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    width: 100vw;
+    height: 115vh;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url("1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    height: 10vh;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.pr {
+    
+    color: #ff7200;
+    font-size: 35px;
+    font-family: Arial;
+}
+
+.titles ul{
+    display: flex;
+    list-style: none;
+    
+}
+
+
+.titles ul li a{
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #fff;
+    padding-left: 100px;
+    transition: .5s ease;
+}
+
+.titles ul li a:hover{
+    color: #ff7200;
+}
+
+.srch{
+    display: flex;
+}
+
+.srch input{
+    border: 1px solid #ff7200;
+    background: transparent;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-right: 0;
+}
+
+.btn-srch {
+    width: 80px;
+    padding: 10px;
+    margin-left: 0;
+    background-color: #ff7200;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px; 
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-srch a{
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.content{
+    margin-top: 200px;
+    margin-left: 70px;
+    display: flex;
+
+}
+
+.first-box {
+    width: 70%;
+}
+
+.title {
+    font-size: 50px;
+}
+
+.first-box span {
+    color: #ff7200;
+    font-size: 55px; 
+}
+
+.content p{
+    font-size: 13px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 22px;
+}
+
+.jn-d{
+    margin-top: 30px;
+    cursor: pointer;
+    transition: .5s ease-in;
+}
+
+.jn {
+    padding: 10px 40px;
+    background-color: #ff7200;
+    border-radius: 10px;
+    }
+
+.content a{
+    text-decoration: none;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.content a:hover {
+    color: #fff;
+}
+
+.login-box {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 20%;
+    height: 400px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.login-box .lh{
+    width: 80%;
+    height: 10%;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 20px
+    
+}
+
+.lh h1 {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-top: 10px;
+    color: #ff7200;
+}
+
+.login-box input{
+    margin-left: 30px;
+    margin-top: 20px;
+    background: transparent;
+    width: 80%;
+    height: 10%;
+    border: none;
+    border-bottom: 1px solid #ff7200; 
+    color: #fff;
+}
+
+::placeholder {
+    font-size: 15px;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+.login-box .login{
+    width: 80%;
+    height: 10%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.login-box .login botton{
+    background-color: #ff7200;
+    padding: 5% 40%;
+    border-radius: 10px;
+    
+}
+
+.login botton a{
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.login-box p{
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.login-box span{
+    color: #ff7200;
+}
+
+.icon a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.icon ion-icon{
+    color: #fff;
+    font-size: 25px;
+    padding-left: 10px;
+    padding-top: 5px;
+    transition: .3s ease;
+}
+
+.icon ion-icon:hover{
+    color: #ff7200;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,199 @@
+@include media-md {
+    .menu-btn {
+        visibility: hidden;
+    }
+
+    .menu-nav {
+        
+        transform: translateY(0);
+        width: 100vw;
+        height: auto;
+        background: transparent;
+
+        &-list {
+            margin: 0;
+            transform: translateX(0);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            
+        }
+
+        &-item {
+            margin: 20px 30px 0 0;
+        }
+
+        &-link {
+            font-weight: 300;
+        }
+    }
+
+    .home-name {
+        font-size: 3.5rem;
+    }
+
+    .about{
+        &-bio {
+            font-size: 1.5rem;
+
+            .underline {
+                width: 100px;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        .social-icons {
+            font-size: 1.4rem;
+            left: 0.9rem;
+        }
+    }
+
+    .projects {
+        background-color: $primary-color;
+
+        &-image-label {
+            font-size: 1.5rem;
+
+            .underline {
+                width: 250px;
+                margin-top: 10px;
+            }
+        }
+
+        &-container {
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 80vw;
+            height: 80vh;
+            margin: auto;
+        }
+
+        &-item {
+            width: 35vw;
+        }
+
+        .social-icons {
+            font-size: 1.4rem;
+            left: 0.9rem;
+        }
+
+    }
+
+    .contact {
+
+        .social-icons {
+            font-size: 1.5rem;
+            margin-top: 0;
+
+            &-link {
+                margin-left: 30px;
+            }
+        }
+
+        footer {
+            font-size: 1.4rem;
+        }
+    }
+
+}
+
+@include media-lg {
+    .menu-nav-item {
+        margin: 20px 90px 0 0;
+    }
+
+    .home-name {
+        font-size: 4rem;
+    }
+
+    .home {
+        .social-icons{
+            font-size: 1.3rem;
+        }
+    }
+
+    .about-image {
+        background: linear-gradient(
+        to right,
+        rgba($primary-color, 0.98),
+        rgba($primary-color, 0.5)
+      ),
+      url('../img/about-lg-bg.jpg') center;
+    }
+
+    .projects {
+
+        &-image {
+            background: linear-gradient(
+                to right,
+                rgba($primary-color, 0.9),
+                rgba($primary-color, 0.7)
+            ),
+            url('../img/projects-lg-bg.jpg') center 40%;
+            background-size: cover;
+
+            &-label {
+                font-size: 1.6rem;
+    
+                .underline {
+                    width: 300px;
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        &-container {
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 90vw;
+            height: 80vh;
+            margin: auto;
+        }
+
+        &-item {
+            width: 25vw;
+        }
+
+        .social-icons {
+            font-size: 1.4rem;
+            left: 0.9rem;
+        }
+
+    }
+
+    .contact {
+        h2 {
+            font-size: 4rem;
+            margin-left: 0;
+            text-align: center;
+        }
+
+        &-list {
+            height: auto;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin: 9vh 0vw 0vh 0vw;
+        }
+
+        .social-icons {
+            text-align: center;
+            margin: auto ;
+            margin-top: 5vh;
+            font-size: 1.5rem;
+            position: inherit;
+
+            &-link {
+                margin-left: 60px;
+            }
+        }
+
+        footer {
+            font-size: 1.4rem;
+        }
+    }
+}

@@ -1,0 +1,184 @@
+.about {
+  overflow: hidden;
+
+  &-image {
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(
+        to right,
+        rgba($primary-color, 0.98),
+        rgba($primary-color, 0.5)
+      ),
+      url('../img/coding-wallpaper.jpg') center;
+    background-size: cover;
+  }
+
+  &-bio {
+    text-align: center;
+    color: set-text-color($primary-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 80%;
+
+    .underline {
+      width: 60px;
+      height: 0.1px;
+      background-color: $secondary-color;
+      margin: auto;
+      box-shadow: 1px 1px 4px 3px $secondary-color;
+      margin-bottom: 5px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+  }
+
+  &-container {
+    background-color: $primary-color;
+    width: 100vw;
+  }
+
+  &-table {
+    width: 70vw;
+    margin: auto auto;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    &-container {
+        
+
+      &-item {
+        background-color: #5a5a5ad0;
+        margin-top: 30px;
+        padding: 10px;
+        color: set-text-color($primary-color);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        max-height: 115px;
+        transition: max-height 1s;
+        overflow: hidden;
+        
+
+        h1 {
+          font-family: 'Delius', sans-serif;
+          font-size: 19px;
+          color: darken($secondary-color, $amount: 7%);
+        }
+
+        .language-container {
+          float: right;
+          position: relative;
+          bottom: 30px;
+          left: 7px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          img {
+            background-size: cover;
+            width: 30px;
+            height: 27px;
+            margin-right: 4px;
+            margin-top: 2px;
+          }
+
+          // .language {
+          //   font-size: 15px;
+          //   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          //   font-weight: 400;
+          // }
+        }
+
+        h5 {
+          font-family: 'Dosis', sans-serif;
+          font-size: 15px;
+          font-weight: 700;
+          color: rgb(0, 0, 0);
+          display: inline;
+          border-bottom: 2px solid darken($secondary-color, $amount: 20%);
+        }
+         p {
+            margin-top: 15px;
+         }
+
+        .link {
+            float: right;
+            display: flex;
+            
+            
+            &:hover {
+                color: #000;
+            }
+        }
+      }
+
+      .toggle {
+        max-height: 300px;
+      }  
+
+      &-extra {
+        width: 50px;
+        height: 18px;
+        background-color: darken($secondary-color, 10%);
+        border-bottom-right-radius: 100%;
+        cursor: pointer;
+        box-shadow: 3px 3px 9px 0px set-text-color($primary-color);
+
+        .plus-1 {
+            background: #000;
+            width: 13px;
+            height: 2px;
+            transform: rotate(90deg) translate(7px, -11px);
+            transition: background 0.6s;
+        }
+
+        .animation {
+          background: transparent;
+        }
+
+        .plus-2 {
+            background: #000;
+            width: 13px;
+            height: 2px;
+            transform: translate(11px, 5px);
+        }
+      }
+    }
+  }
+
+  .social-icons {
+    overflow: hidden;
+    z-index: 1;
+    position: fixed;
+    bottom: 1rem;
+    left: 0.3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    font-size: 13px;
+
+    &-link {
+      @include transition-ease;
+      color: set-text-color($primary-color);
+      margin: 0.4rem;
+      cursor: pointer;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  footer {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    font-family: 'Dosis', sans-serif;
+    transform: rotate(-90deg) translate(40px, 45px);
+    color: set-text-color($primary-color);
+  }
+}

@@ -1,0 +1,666 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  height: 100vh;
+  z-index: 1;
+  overflow: auto;
+  text-align: center;
+  align-items: center;
+  background: linear-gradient(to right, rgba(38, 38, 38, 0.9), rgba(38, 38, 38, 0.5)), url("../img/home-bg.jpg") center;
+  background-size: cover;
+  color: #fff;
+}
+.home-content {
+  margin-top: 40vh;
+}
+.home-greeting {
+  font-family: "Delius Swash Caps", cursive;
+  font-size: 2rem;
+  margin-bottom: -0.7rem;
+}
+.home-name {
+  font-family: "Dosis", sans-serif;
+  font-size: 3rem;
+  border-bottom: 0.3rem solid #fff;
+}
+.home-work {
+  font-family: "Delius Swash Caps", cursive;
+  margin-top: 0.3rem;
+}
+.home .social-icons {
+  overflow: hidden;
+  z-index: 1;
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home .social-icons-link {
+  transition: all 0.5s ease-in-out;
+  color: #fff;
+  margin: 0.4rem;
+  cursor: pointer;
+}
+.home .social-icons-link:hover {
+  color: #a6ff00;
+}
+.home footer {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-family: "Dosis", sans-serif;
+}
+
+.menu-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 3;
+  width: 50px;
+  height: 45px;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  border-radius: 10%;
+  box-shadow: 1.5px 1.5px 10px 0px #fff;
+}
+.menu-btn-burger {
+  position: absolute;
+  top: 20px;
+  right: 0.3rem;
+  width: 40px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.5s ease-in-out;
+  border-radius: 10%;
+}
+.menu-btn-burger::before {
+  content: "";
+  position: absolute;
+  top: -11px;
+  right: 0rem;
+  width: 40px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.5s ease-in-out;
+  border-radius: 10%;
+}
+.menu-btn-burger::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  right: 0rem;
+  width: 40px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.5s ease-in-out;
+  border-radius: 10%;
+}
+.menu-btn > .open {
+  background: transparent;
+}
+.menu-btn > .open::before {
+  transform: rotate(403deg) translate(10px, 8px);
+  border-radius: 10%;
+}
+.menu-btn > .open::after {
+  transform: rotate(-403deg) translate(7px, -7px);
+  border-radius: 10%;
+}
+.menu-nav {
+  z-index: 2;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba(38, 38, 38, 0.98);
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(-100%);
+}
+.menu-nav-list {
+  margin-top: 20vh;
+  transform: translateX(100%);
+}
+.menu-nav-list > .open {
+  transform: translateX(0);
+}
+.menu-nav > .open {
+  transform: translateX(0);
+}
+.menu-nav-item {
+  margin-top: 13vh;
+  transition: all 0.5s ease-in-out;
+}
+.menu-nav-item:nth-child(1) {
+  transition-delay: 0.19s;
+}
+.menu-nav-item:nth-child(2) {
+  transition-delay: 0.38s;
+}
+.menu-nav-item:nth-child(3) {
+  transition-delay: 0.57s;
+}
+.menu-nav-item:nth-child(4) {
+  transition-delay: 0.76s;
+}
+.menu-nav-link {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.8rem;
+  transition: all 0.5s ease-in-out;
+}
+.menu-nav-link:hover {
+  color: #a6ff00;
+}
+.menu-nav .active {
+  color: #a6ff00;
+}
+.menu > .open {
+  transform: translateY(0);
+}
+
+.about {
+  overflow: hidden;
+}
+.about-image {
+  width: 100vw;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(to right, rgba(38, 38, 38, 0.98), rgba(38, 38, 38, 0.5)), url("../img/coding-wallpaper.jpg") center;
+  background-size: cover;
+}
+.about-bio {
+  text-align: center;
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 80%;
+}
+.about-bio .underline {
+  width: 60px;
+  height: 0.1px;
+  background-color: #a6ff00;
+  margin: auto;
+  box-shadow: 1px 1px 4px 3px #a6ff00;
+  margin-bottom: 5px;
+}
+.about-bio p {
+  margin-bottom: 15px;
+}
+.about-container {
+  background-color: #262626;
+  width: 100vw;
+}
+.about-table {
+  width: 70vw;
+  margin: auto auto;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.about-table-container-item {
+  background-color: rgba(90, 90, 90, 0.8156862745);
+  margin-top: 30px;
+  padding: 10px;
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  max-height: 115px;
+  transition: max-height 1s;
+  overflow: hidden;
+}
+.about-table-container-item h1 {
+  font-family: "Delius", sans-serif;
+  font-size: 19px;
+  color: #8fdb00;
+}
+.about-table-container-item .language-container {
+  float: right;
+  position: relative;
+  bottom: 30px;
+  left: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.about-table-container-item .language-container img {
+  background-size: cover;
+  width: 30px;
+  height: 27px;
+  margin-right: 4px;
+  margin-top: 2px;
+}
+.about-table-container-item h5 {
+  font-family: "Dosis", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  display: inline;
+  border-bottom: 2px solid #649900;
+}
+.about-table-container-item p {
+  margin-top: 15px;
+}
+.about-table-container-item .link {
+  float: right;
+  display: flex;
+}
+.about-table-container-item .link:hover {
+  color: #000;
+}
+.about-table-container .toggle {
+  max-height: 300px;
+}
+.about-table-container-extra {
+  width: 50px;
+  height: 18px;
+  background-color: #85cc00;
+  border-bottom-right-radius: 100%;
+  cursor: pointer;
+  box-shadow: 3px 3px 9px 0px #fff;
+}
+.about-table-container-extra .plus-1 {
+  background: #000;
+  width: 13px;
+  height: 2px;
+  transform: rotate(90deg) translate(7px, -11px);
+  transition: background 0.6s;
+}
+.about-table-container-extra .animation {
+  background: transparent;
+}
+.about-table-container-extra .plus-2 {
+  background: #000;
+  width: 13px;
+  height: 2px;
+  transform: translate(11px, 5px);
+}
+.about .social-icons {
+  overflow: hidden;
+  z-index: 1;
+  position: fixed;
+  bottom: 1rem;
+  left: 0.3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  font-size: 13px;
+}
+.about .social-icons-link {
+  transition: all 0.5s ease-in-out;
+  color: #fff;
+  margin: 0.4rem;
+  cursor: pointer;
+}
+.about .social-icons-link:hover {
+  color: #a6ff00;
+}
+.about footer {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-family: "Dosis", sans-serif;
+  transform: rotate(-90deg) translate(40px, 45px);
+  color: #fff;
+}
+
+.projects {
+  overflow: hidden;
+}
+.projects-image {
+  width: 100vw;
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background: linear-gradient(to right, rgba(38, 38, 38, 0.9), rgba(38, 38, 38, 0.7)), url("../img/projects-bg.jpg") center bottom;
+  background-size: cover;
+}
+.projects-image-label {
+  text-align: center;
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 80%;
+}
+.projects-image-label .underline {
+  width: 140px;
+  height: 0.1px;
+  background-color: #a6ff00;
+  margin: auto;
+  box-shadow: 1px 1px 4px 3px #a6ff00;
+  margin-bottom: 20px;
+}
+.projects-container {
+  background-color: #262626;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+.projects-item {
+  width: 70vw;
+  margin-top: 20px;
+}
+.projects-item-image img {
+  width: 100%;
+  height: 170px;
+  opacity: 0.4;
+}
+.projects-item-box {
+  position: relative;
+  top: -4px;
+  background-color: rgb(65, 65, 65);
+}
+.projects-item-box .description-box {
+  display: none;
+}
+.projects-item-box .description-box h3 {
+  margin-top: 7px;
+  font-family: "Delius", sans-serif;
+  color: #8fdb00;
+  border-bottom: 3px solid #000;
+  display: inline-block;
+}
+.projects-item-box .description-box p {
+  margin-top: 7px;
+  padding: 5px;
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.projects-item-box .link-box {
+  display: none;
+  padding: 6px;
+}
+.projects-item-box .link-box h4 {
+  margin-top: 7px;
+  margin-bottom: 5px;
+  font-family: "Delius", sans-serif;
+  color: #8fdb00;
+  border-bottom: 3px solid #000;
+  width: 110px;
+}
+.projects-item-box .link-box .link {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Delius", sans-serif;
+  font-size: 15px;
+}
+.projects-item-box .link-box .link:hover {
+  color: violet;
+}
+.projects-item-box .lang-box {
+  display: none;
+  padding: 7px;
+}
+.projects-item-box .lang-box img {
+  margin-right: 7px;
+  width: 30px;
+  height: 30px;
+}
+.projects-item-nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-family: "Dosis", Courier, monospace;
+  font-weight: 900;
+  position: relative;
+  top: -4px;
+}
+.projects-item-nav .description {
+  width: 80px;
+  height: 18px;
+  background-color: #85cc00;
+  border-bottom-right-radius: 100%;
+  cursor: pointer;
+  box-shadow: 3px 3px 9px 0px #fff;
+}
+.projects-item-nav .link {
+  width: 80px;
+  height: 18px;
+  background-color: #85cc00;
+  border-bottom-right-radius: 100%;
+  cursor: pointer;
+  box-shadow: 3px 3px 9px 0px #fff;
+}
+.projects-item-nav .lang {
+  width: 80px;
+  height: 18px;
+  background-color: #85cc00;
+  border-bottom-right-radius: 100%;
+  cursor: pointer;
+  box-shadow: 3px 3px 9px 0px #fff;
+}
+.projects .social-icons {
+  overflow: hidden;
+  z-index: 1;
+  position: fixed;
+  bottom: 1rem;
+  left: 0.3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+.projects .social-icons-link {
+  transition: all 0.5s ease-in-out;
+  color: #fff;
+  margin: 0.4rem;
+  cursor: pointer;
+}
+.projects .social-icons-link:hover {
+  color: #a6ff00;
+}
+.projects footer {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-family: "Dosis", sans-serif;
+  transform: rotate(-90deg) translate(40px, 45px);
+  color: #fff;
+}
+
+.contact {
+  height: 100vh;
+  z-index: 1;
+  overflow: auto;
+  background: linear-gradient(to right, rgba(38, 38, 38, 0.9), rgba(38, 38, 38, 0.5)), url("../img/home-bg.jpg") center;
+  background-size: cover;
+  color: #fff;
+}
+.contact h2 {
+  font-size: 3rem;
+  margin-top: 25vh;
+  margin-left: 15vw;
+  font-family: "Dosis", sans-serif;
+  color: #fff;
+}
+.contact-list {
+  font-size: 1.5rem;
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Dosis", sans-serif;
+  margin: 5vh 0px 5vh 15vw;
+}
+.contact .social-icons {
+  overflow: hidden;
+  z-index: 1;
+  position: inherit;
+  bottom: 1rem;
+  left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact .social-icons-link {
+  transition: all 0.5s ease-in-out;
+  color: #fff;
+  margin: 0.4rem;
+  cursor: pointer;
+}
+.contact .social-icons-link:hover {
+  color: #a6ff00;
+}
+.contact footer {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-family: "Dosis", sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    visibility: hidden;
+  }
+  .menu-nav {
+    transform: translateY(0);
+    width: 100vw;
+    height: auto;
+    background: transparent;
+  }
+  .menu-nav-list {
+    margin: 0;
+    transform: translateX(0);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .menu-nav-item {
+    margin: 20px 30px 0 0;
+  }
+  .menu-nav-link {
+    font-weight: 300;
+  }
+  .home-name {
+    font-size: 3.5rem;
+  }
+  .about-bio {
+    font-size: 1.5rem;
+  }
+  .about-bio .underline {
+    width: 100px;
+  }
+  .about-bio p {
+    font-size: 1rem;
+  }
+  .about .social-icons {
+    font-size: 1.4rem;
+    left: 0.9rem;
+  }
+  .projects {
+    background-color: #262626;
+  }
+  .projects-image-label {
+    font-size: 1.5rem;
+  }
+  .projects-image-label .underline {
+    width: 250px;
+    margin-top: 10px;
+  }
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80vw;
+    height: 80vh;
+    margin: auto;
+  }
+  .projects-item {
+    width: 35vw;
+  }
+  .projects .social-icons {
+    font-size: 1.4rem;
+    left: 0.9rem;
+  }
+  .contact .social-icons {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+  .contact .social-icons-link {
+    margin-left: 30px;
+  }
+  .contact footer {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu-nav-item {
+    margin: 20px 90px 0 0;
+  }
+  .home-name {
+    font-size: 4rem;
+  }
+  .home .social-icons {
+    font-size: 1.3rem;
+  }
+  .about-image {
+    background: linear-gradient(to right, rgba(38, 38, 38, 0.98), rgba(38, 38, 38, 0.5)), url("../img/about-lg-bg.jpg") center;
+  }
+  .projects-image {
+    background: linear-gradient(to right, rgba(38, 38, 38, 0.9), rgba(38, 38, 38, 0.7)), url("../img/projects-lg-bg.jpg") center 40%;
+    background-size: cover;
+  }
+  .projects-image-label {
+    font-size: 1.6rem;
+  }
+  .projects-image-label .underline {
+    width: 300px;
+    margin-top: 10px;
+  }
+  .projects-container {
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90vw;
+    height: 80vh;
+    margin: auto;
+  }
+  .projects-item {
+    width: 25vw;
+  }
+  .projects .social-icons {
+    font-size: 1.4rem;
+    left: 0.9rem;
+  }
+  .contact h2 {
+    font-size: 4rem;
+    margin-left: 0;
+    text-align: center;
+  }
+  .contact-list {
+    height: auto;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 9vh 0vw 0vh 0vw;
+  }
+  .contact .social-icons {
+    text-align: center;
+    margin: auto;
+    margin-top: 5vh;
+    font-size: 1.5rem;
+    position: inherit;
+  }
+  .contact .social-icons-link {
+    margin-left: 60px;
+  }
+  .contact footer {
+    font-size: 1.4rem;
+  }
+}
+.text-secondary {
+  color: #a6ff00;
+  font-weight: 600;
+}/*# sourceMappingURL=main.css.map */
