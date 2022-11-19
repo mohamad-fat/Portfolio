@@ -92,7 +92,7 @@
         &-item {
             margin-top: 13vh;
             @include transition-ease;
-            //transform: translateX(100%);
+            transform: translateX(100%);
 
             @for $i from 1 through 4 {
                 &:nth-child(#{$i}) {
