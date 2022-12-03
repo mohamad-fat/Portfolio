@@ -108,10 +108,13 @@
         .link {
             float: right;
             display: flex;
-            
+            color: rgb(0, 235, 165);
+            letter-spacing: 0.4px;
+            text-decoration: none;
             
             &:hover {
-                color: #000;
+                color: black;
+                transition: 0.3s ease-in-out;
             }
         }
       }
