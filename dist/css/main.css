@@ -359,9 +359,14 @@
   width: 70vw;
   margin-top: 20px;
 }
+.projects-item-image {
+  height: 14rem;
+}
 .projects-item-image img {
   width: 100%;
-  height: 170px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   opacity: 0.4;
 }
 .projects-item-box {
